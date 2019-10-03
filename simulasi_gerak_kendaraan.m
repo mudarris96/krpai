@@ -6,16 +6,11 @@
 
 #include <SoftwareSerial.h>  //header file of software serial port
 
-SoftwareSerial Serial1(2,3); //define software serial port name as Serial1 and define pin2 as RX and pin3 as TX
+SoftwareSerial Serial1(2,3); //define software al port name as Serial1 and define pin2 as RX and pin3 as TX
 
 /* For Arduinoboards with multiple serial ports like DUEboard, interpret above two pieces of code and directly use Serial1 serial port*/
 
-int dist; //actual distance measurements of LiDAR
-int strength; //signal strength of LiDAR
-int check;  //save check value
-int i;
-int uart[9];  //save data measured by LiDAR
-const int HEADER=0x59;  //frame header of data package
+
 
 void setup() {
   Serial.begin(9600); //set bit rate of serial port connecting Arduino with computer
